@@ -27,6 +27,7 @@ import { InternalServerComponent } from './error-pages/internal-server/internal-
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
       { path: '404', component : NotFoundComponent},
+      { path: '500', component: InternalServerComponent },
       { path: 'owner', loadChildren: "./owner/owner.module#OwnerModule" },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/404', pathMatch: 'full'}
