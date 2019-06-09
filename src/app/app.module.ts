@@ -8,7 +8,6 @@ import { RepositoryService } from './shared/services/repository.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { OwnerComponent } from './owner/owner.component';
 import { MenuComponent } from './menu/menu.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 
@@ -17,7 +16,6 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    OwnerComponent,
     MenuComponent,
     NotFoundComponent
   ],
@@ -27,6 +25,7 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
       { path: '404', component : NotFoundComponent},
+      { path: 'owner', loadChildren: "./owner/owner.module#OwnerModule" },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/404', pathMatch: 'full'}
     ])
