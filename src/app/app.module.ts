@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { EnvironmentUrlService } from './shared/services/environment-url.service';
 import { RepositoryService } from './shared/services/repository.service';
+import { ErrorHandlerService } from './shared/services/error-handler.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -35,7 +36,8 @@ import { InternalServerComponent } from './error-pages/internal-server/internal-
   ],
   providers: [
     EnvironmentUrlService,
-    RepositoryService
+    RepositoryService,
+    ErrorHandlerService
   ],
   bootstrap: [AppComponent]
 })
