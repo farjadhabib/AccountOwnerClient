@@ -1,4 +1,4 @@
-import Account, { Account } from "./account.model"
+import { Account } from "./account.model"
 
 export interface Owner{
     id: number;
